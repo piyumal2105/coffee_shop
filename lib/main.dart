@@ -35,6 +35,7 @@ class MyHomePage extends StatelessWidget {
           icon: Icon(Icons.menu),
           onPressed: () {},
         ),
+        title: Text("Home Page"),
       ),
     );
   }
