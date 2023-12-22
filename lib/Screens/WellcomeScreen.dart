@@ -2,6 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import 'HomeScreen.dart';
+
 class WellcomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -34,6 +36,33 @@ class WellcomeScreen extends StatelessWidget {
                     color: Colors.white.withOpacity(0.8),
                     fontSize: 18,
                     fontWeight: FontWeight.w500,
+                    letterSpacing: 1,
+                  ),
+                ),
+                SizedBox(
+                  height: 50,
+                ),
+                Material(
+                  color: Color(0xFFE57734),
+                  borderRadius: BorderRadius.circular(10),
+                  child: InkWell(
+                    onTap: () {
+                      Navigator.push(context, MaterialPageRoute(
+                        builder: (context) => HomeScreen(),
+                      ));
+                    },
+                    child: Container(
+                      padding: EdgeInsets.symmetric(vertical: 15, horizontal: 50),
+                      child: Text(
+                        "Get Start",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 22,
+                          letterSpacing: 1
+                        ),
+                      ),
+                    ),
                   ),
                 ),
               ],
