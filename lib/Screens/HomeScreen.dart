@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import '../widget/HomeBottomBar.dart';
 import '../widget/ItemsWidget.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -109,16 +110,16 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
                 isScrollable: true,
                 indicator: UnderlineTabIndicator(
                   borderSide: BorderSide(
-                    width: 4,
-                    color: Color(0xFFE57734)
+                      width: 4,
+                      color: Color(0xFFE57734)
                   ),
                   insets: EdgeInsets.symmetric(horizontal: 16),
                 ),
                 labelStyle: TextStyle(
-                  fontSize: 20,
+                  fontSize: 18,
                   fontWeight: FontWeight.w500,
                 ),
-                labelPadding: EdgeInsets.symmetric(horizontal: 20),
+                labelPadding: EdgeInsets.symmetric(horizontal: 15),
                 tabs: [
                   Tab(text: "Hot Coffee"),
                   Tab(text: "Cold Coffee"),
@@ -141,6 +142,7 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
           ),
         ),
       ),
+      bottomNavigationBar: HomeBottomBar(),
     );
   }
 }
